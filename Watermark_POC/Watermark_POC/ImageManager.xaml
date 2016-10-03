@@ -1,0 +1,38 @@
+﻿<Window x:Class="Watermark_POC.ImageManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Carnival Studios-Mark it!" Height="626.548" Width="1002.928" ResizeMode="CanMinimize" Background="#FFFBFBFB" Foreground="#FF040404" Style="{StaticResource MyWindowStyle}" >
+    <Grid Margin="0,0,-6,0">
+        <Grid.Resources>
+            <DataTemplate x:Key="myImages">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Name="listImg" Stretch='Uniform' Grid.Row="0" Source="{Binding picture}" Height="400" Width="978">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="1" Y="1"/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock Name="txtblock" FontSize="15" Grid.Row="1" Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="SketchFlow Print"></TextBlock>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <WrapPanel ClipToBounds="True" Margin="0,0,10,0">
+            <WrapPanel Width="977">
+                <ListBox  x:Name="ImageListBox" Width="980" Height="500" ItemTemplate="{DynamicResource myImages}" Grid.IsSharedSizeScope="True" UseLayoutRounding="True" Background="#FF291D72" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                </ListBox>
+            </WrapPanel>
+            <Button x:Name="btnAddImage" Content="Add Image" Height="98" Width="236" Click="btnAddImage_Click" Background="#FF5741BB" FontWeight="Bold" FontSize="25" FontFamily="SketchFlow Print" />
+            <Button x:Name="btnDeleteImage" Content="Delete Image" Height="98" Width="218" Background="#FF5741BB" FontWeight="Bold" FontSize="25" FontFamily="SketchFlow Print" Click="btnDeleteImage_Click" />
+            <Button x:Name="btnSlideShow" Content="Slide Show" Height="98" Width="282" Click="btnSlideShow_Click" Background="#FF5741BB" FontFamily="SketchFlow Print" FontSize="25" FontWeight="Bold"/>
+            <Button x:Name="btnAddWatermark" Content="Add Watermark" Height="98" Width="241" Click="btnAddWatermark_Click" Background="#FF5741BB" FontFamily="SketchFlow Print" FontSize="25" FontWeight="Bold"/>
+        </WrapPanel>
+    </Grid>
+</Window>

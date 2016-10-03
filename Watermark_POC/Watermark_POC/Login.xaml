@@ -1,0 +1,26 @@
+﻿<Window x:Class="Watermark_POC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Carnival Studios-Mark it!" Height="350" Width="525" Background="#FFFBFBFB" Foreground="#FF040404" ResizeMode="CanMinimize" Style="{StaticResource MyWindowStyle}">
+    <Grid Background="#FF291D72">
+        <Grid HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517">
+            <TextBox x:Name="usertxtbx" HorizontalAlignment="Left" Height="23" Margin="200,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Background="#FF533999"/>
+            <PasswordBox x:Name="passwordbx" HorizontalAlignment="Left" Margin="200,164,0,0" VerticalAlignment="Top" Height="25" Width="177" Background="#FF533999"/>
+            <Label x:Name="Username"  HorizontalAlignment="Left" Margin="86,115,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Tekton Pro">
+            <TextBlock TextDecorations="Underline">
+                Username
+            </TextBlock>
+            </Label>
+            <Label x:Name="Password"  HorizontalAlignment="Left" Margin="89,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Tekton Pro">
+                <TextBlock TextDecorations="Underline">
+                    Password
+                </TextBlock>
+            </Label>
+            <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="216,247,0,0" VerticalAlignment="Top" Width="126" Click="LoginBtn_Click" RenderTransformOrigin="1.28,0.7" FontWeight="Bold" FontFamily="Tekton Pro Cond" FontSize="20" Height="42" Background="#FF533999"/>
+            <Label x:Name="lblLogin"  HorizontalAlignment="Center" Margin="41,26,20,230" VerticalAlignment="Center" FontWeight="Bold" FontSize="40" Width="456" Height="63" FontFamily="Tekton Pro" RenderTransformOrigin="0.705,0.492" TextOptions.TextFormattingMode="Display">
+                <TextBlock TextDecorations="Underline">Carnival Studios-Mark it!</TextBlock>
+            </Label>
+        </Grid>
+
+    </Grid>
+</Window>
